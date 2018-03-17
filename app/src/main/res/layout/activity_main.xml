@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Séance de Fractionné"
+        android:textColor="#000000"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/temps_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titre"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="Nombre de cycle à réaliser : "
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/duree"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temps_text"
+        android:layout_alignParentStart="true"
+        android:hint="1 cycle = 1 repos + 1 accélération"
+        android:inputType="numberDecimal"
+        />
+
+    <TextView
+        android:id="@+id/accel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/duree"
+        android:gravity="center"
+        android:text="Accélération (en secondes) : "
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/acceleration"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accel"
+        android:layout_alignParentStart="true"
+        android:hint="Accélération"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="Repos (en secondes): "
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/repos"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_weight="1"
+        android:hint="Repos"
+        android:inputType="numberDecimal" />
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_below="@+id/repos"
+        android:text="Activité Rapide : "
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        android:id="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textView"
+        >
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15-15"
+            />
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30-30"
+            />
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15-30"
+            />
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30-15"
+            />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/raz"
+        android:layout_alignBaseline="@+id/raz"
+        android:layout_alignBottom="@+id/raz"
+        android:layout_marginStart="76dp"
+        android:text="GO!" />
+
+    <Button
+        android:id="@+id/raz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginStart="65dp"
+
+        android:text="RAZ" />
+
+    <TextView
+        android:id="@+id/mode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group"
+        android:gravity="center"
+        android:text="Mode d'utilisation : "
+        android:textColor="#FF0000"
+        android:textStyle="bold" />
+
+
+    <RadioGroup
+        android:id="@+id/group_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mode"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/mode1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vibreur" />
+
+        <RadioButton
+            android:id="@+id/mode2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bip" />
+    </RadioGroup>
+</RelativeLayout>
